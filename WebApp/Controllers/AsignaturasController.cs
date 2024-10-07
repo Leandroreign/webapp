@@ -16,42 +16,42 @@ namespace WebApp.Controllers
         // GET: AsignaturasController
         public ActionResult Index()
         {
-            //var asignaturas = _context.Asignaturas.ToList();
-            List<Asignatura> asignaturas = new List<Asignatura>
-        {
-            new Asignatura
-            {
-                Id = 1,
-                Nombre = "Matemáticas",
-                Profesor = "Dr. Juan Pérez",
-                Creditos = 6,
-                Cuatrimestre = 1
-            },
-            new Asignatura
-            {
-                Id = 2,
-                Nombre = "Programación",
-                Profesor = "Ing. Ana López",
-                Creditos = 8,
-                Cuatrimestre = 2
-            },
-            new Asignatura
-            {
-                Id = 3,
-                Nombre = "Física",
-                Profesor = "Mtro. Carlos García",
-                Creditos = 5,
-                Cuatrimestre = 1
-            },
-            new Asignatura
-            {
-                Id = 4,
-                Nombre = "Química",
-                Profesor = "Dra. María Sánchez",
-                Creditos = 7,
-                Cuatrimestre = 3
-            }
-        };
+            var asignaturas = _context.Asignaturas.ToList();
+        //    List<Asignatura> asignaturas = new List<Asignatura>
+        //{
+        //    new Asignatura
+        //    {
+        //        Id = 1,
+        //        Nombre = "Matemáticas",
+        //        Profesor = "Dr. Juan Pérez",
+        //        Creditos = 6,
+        //        Cuatrimestre = 1
+        //    },
+        //    new Asignatura
+        //    {
+        //        Id = 2,
+        //        Nombre = "Programación",
+        //        Profesor = "Ing. Ana López",
+        //        Creditos = 8,
+        //        Cuatrimestre = 2
+        //    },
+        //    new Asignatura
+        //    {
+        //        Id = 3,
+        //        Nombre = "Física",
+        //        Profesor = "Mtro. Carlos García",
+        //        Creditos = 5,
+        //        Cuatrimestre = 1
+        //    },
+        //    new Asignatura
+        //    {
+        //        Id = 4,
+        //        Nombre = "Química",
+        //        Profesor = "Dra. María Sánchez",
+        //        Creditos = 7,
+        //        Cuatrimestre = 3
+        //    }
+        //};
 
             return View(asignaturas);
         }
