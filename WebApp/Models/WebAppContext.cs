@@ -21,7 +21,7 @@ public partial class WebAppContext :  DbContext
 
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer(_configuration.GetConnectionString("Default"));
+        => optionsBuilder.UseNpgsql(_configuration.GetConnectionString("Default"));
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -30,10 +30,7 @@ public partial class WebAppContext :  DbContext
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
-    public virtual DbSet<Customer> Customers { get; set; }
-    public virtual DbSet<Product> Products { get; set; }
-    public virtual DbSet<User> Users { get; set; }
-    public virtual DbSet<Role> Roles { get; set; }
+    public virtual DbSet<Asignatura> Asignaturas { get; set; }
     //Add-Migration intialMigration
     //Update-DataBase 
 }

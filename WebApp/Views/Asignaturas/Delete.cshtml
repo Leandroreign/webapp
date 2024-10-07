@@ -1,4 +1,4 @@
-﻿@model WebApp.Models.Product
+﻿@model WebApp.Models.Asignatura
 
 @{
     ViewData["Title"] = "Delete";
@@ -15,19 +15,25 @@
         <h4>Customer</h4>
         <dl class="row">
             <dt class = "col-sm-2">
-                @Html.DisplayNameFor(model => model.ProductName)
+                @Html.DisplayNameFor(model => model.Nombre)
             </dt>
             <dt class = "col-sm-2">
-                @Html.DisplayNameFor(model => model.Active)
+                @Html.DisplayNameFor(model => model.Profesor)
             </dt>
             <dd class = "col-sm-10">
-                @Html.DisplayFor(model => model.Active)
+                @Html.DisplayFor(model => model.Profesor)
             </dd>
             <dt class = "col-sm-2">
-                @Html.DisplayNameFor(model => model.UpdateDate)
+                @Html.DisplayNameFor(model => model.Creditos)
             </dt>
             <dd class = "col-sm-10">
-                @Html.DisplayFor(model => model.UpdateDate)
+                @Html.DisplayFor(model => model.Creditos)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Cuatrimestre)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Cuatrimestre)
             </dd>
         </dl>
     
@@ -35,7 +41,7 @@
     </div>
     <div class="card-footer">
         <form asp-action="Delete">
-            <input type="hidden" asp-for="ProductId" />
+            <input type="hidden" asp-for="Id" />
             <input type="submit" value="Delete" class="btn btn-danger" /> |
             <a asp-action="Index">Back to List</a>
         </form>

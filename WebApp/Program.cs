@@ -13,7 +13,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<WebAppContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("Default"));
 });
 //builder.Services.AddCustomDbContext<WebAppContext>(builder.Configuration);
 //builder.Services.AddCustomIdentity<User, Roles, WebAppContext, Guid>();
@@ -38,6 +38,6 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Login}/{action=Index}");
+    pattern: "{controller=Home}/{action=Index}");
 
 app.Run();
